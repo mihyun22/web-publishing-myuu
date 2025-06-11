@@ -40,7 +40,7 @@ utf-8은 2바이트 문자를 모두 처리하는 방식임 */
 /* 1. 상단영역 */
       .header {
         /* 배경색 */
-        background-color: #3dcfff;
+        background-color: #04C75B;
         
         /* 하단마진 덮어쓰기 */
         margin-bottom: 20px;
@@ -87,7 +87,7 @@ utf-8은 2바이트 문자를 모두 처리하는 방식임 */
        /* 메뉴링크 */
       .header ul li a {
         /* 글자색 */
-        color: black;
+        color: darkgreen;
         /* 글자밑줄없앰 */
         text-decoration: none;
         /* 글자두껍게 */
