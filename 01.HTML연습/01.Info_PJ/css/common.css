@@ -4,6 +4,13 @@ utf-8은 2바이트 문자를 모두 처리하는 방식임 */
 
 /* info PJ 공통 CSS - common.css */
 
+/* 웹폰트 불러오기 */
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap');
+/* 웹폰트체 셋팅법
+font-family: "Noto Sans KR", sans-serif;
+font-family: "Jua", sans-serif;
+*/
+
 /* 공통클래스 */
 /* 1. 보더 디자인 클래스 */
 .border-style1{
@@ -48,6 +55,8 @@ utf-8은 2바이트 문자를 모두 처리하는 방식임 */
 
       /* 타이틀 */
       #main-title{
+        /* 글자체 */
+        font-family: "Jua", sans-serif;
         font-size: 50px;
         color: white;
         margin: 0;
@@ -56,6 +65,8 @@ utf-8은 2바이트 문자를 모두 처리하는 방식임 */
 
       /* 메뉴박스 */
       .header ul{
+        /* 웹폰트 글자체 */
+        font-family: "Noto Sans KR", sans-serif;
         /* 블릿없앰 텍스트앞에 점 */
         list-style: none;
         /* float:left를 사용했으므로
@@ -125,6 +136,7 @@ utf-8은 2바이트 문자를 모두 처리하는 방식임 */
       .header ul li+li::before{
         content: ' | ';
         margin: 0 15px;
+        color: rgb(17, 136, 17);
         /* content: url(../images/naver_logo.png); */
       }
       
