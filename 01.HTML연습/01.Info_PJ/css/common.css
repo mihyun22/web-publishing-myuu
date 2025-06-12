@@ -122,3 +122,17 @@ utf-8은 2바이트 문자를 모두 처리하는 방식임 */
         값: italic / normal */
         font-style: normal;
       }
+
+      /* CEO이름 */
+      span.ceo-name {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: darkgreen;
+    }
+
+    /* 회사 전화번호 */
+    span.tel-num {
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        color: hotpink;
+    }
