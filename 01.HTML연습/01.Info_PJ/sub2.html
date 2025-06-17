@@ -1,61 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>네이버요약뉴스 사회</title>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/sub.css">
-    <style>
-        
-    </style>
-</head>
-<body>
-    <header class="header border-style1 layout-common" style="text-align: center;">
-        <h1 id="main-title">네이버요약뉴스</h1>
-        <ul>
-            <li>
-                <a href="./Index.html"><img id="main-logo" src="./images/naver_logo.png" alt="네이버로고"></a>
-            </li>
-            <li><a href="./sub1.html">경제</a></li>
-            <li><a href="./sub2.html">사회</a></li>
-            <li><a href="./sub3.html">IT/과학</a></li>
-            <li><a href="./sub4.html">TV/연예</a></li>
-        </ul>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- 메타정보
+        1) charset="UTF-8"
+        - 2바이트 인코딩처리
+        - 한글, 일본어 등 처리함 
+        2) viewport
+        - 모바일 화면 실제픽셀전환
+    -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <main class="main layout-common">
-        <h2 class="sub-title">사회</h2>
-        <div class="press-logo">
-            <img src="./images/press_logo2.png" alt="서울경제">
-        </div>
-        <h3>‘인천세관 마약 수사 외압 의혹’ 합수팀 가동</h3>
-        <figure class="article-picture">
-            <img src="./images/article_img2.jpg" alt="기사사진">
-            <figcaption>5일 서울 서초구 대검찰청에 걸린 검찰 깃발이 바람에 펄럭이고 있다. 연합뉴스</figcaption>
-        </figure>
-        <p>
-            [서울경제]
-            검찰과 경찰, 국세청, 금융정보분석원(FIU)이 이른바 ‘인천세관 마약 수사 외압 의혹’을 수사할 합동수사팀을 10일 출범시켰다.
-            <br /><br />
-            대검찰청은 이날 “세관 공무원들의 마약밀수 연루 의혹과 이 사건을 담당했던 영등포경찰서 수사팀에 대한 수사외압 및 사건 은폐 의혹의 실체를 명확히 규명하기 위한 합동수사팀을 출범했다”고 밝혔다.
-            <br /><br />
-            합동수사팀은 윤국권 부산지검 강력범죄수사부 부장검사(사법연수원 37기)를 팀장으로 하고 검찰·경찰·국세청·금융정보분석원에서 파견된 인력 등 총 20여 명으로 구성됐다. 수사본부는 서울동부지검에 설치되며 대검찰청 마약조직범죄부가 직접 지휘할 예정이다.
-            <br /><br />
-            이 사건은 지난 2023년 1월 말레이시아 국적 피의자들이 인천국제공항을 통해 필로폰 약 74kg을 밀수하는 과정에서 인천세관 공무원들이 연루됐다는 의혹에서 시작됐다. 당시 사건을 담당한 서울 영등포경찰서 수사팀이 수사를 진행하는 과정에서 대통령실과 경찰 고위 간부, 관세청 고위 인사 등이 사건을 무마하기 위해 수사팀에 압력을 행사했다는 의혹도 함께 제기된 바 있다. 합동수사팀은 △세관 공무원의 마약 밀수 연루 여부 △경찰과 고위 관계자들의 수사 외압 및 사건 은폐 시도 여부 등 이번 사건의 핵심 의혹을 규명한다는 방침이다. 아울러 이번 사건 수사를 계기로 국내 공항만의 마약 단속 체계와 검찰·경찰·해경·관세청 등 관련 기관 간 수사협력 체계 전반을 점검하고 효율적이고 강력한 마약 수사 시스템 구축을 위한 개선방안도 마련할 계획이다.
-            <br /><br />
-            대검은 “이 사안은 해외 마약 밀수조직에 대한 세관 직원의 연루 의혹이 제기된 초유의 사건이자 대통령실의 수사외압, 구명로비 등 국민적 관심이 집중돼 있는 중대한 사안”이라며 “신속하게 진상을 규명할 필요가 있다”고 설명했다.
-            <br /><br />
-            한편 여당 일각에선 3대 특검(내란∙김건희∙채해병 특검)과 별개로 인천세관 마약 수사 외압 의혹에 대한 상설특검이 필요하다는 주장이 제기된 바 있다.
-        </p>
-        <p></p>   
-    </main>
-    <footer class="footer border-style1 layout-common">
-        <address>
-            서울시 강남구 역삼동 119 대호B 8F<br>
-            대표: Tom Brace Parker <br>
-            전화: 010-2222-3333
-        </address>
-    </footer>
-</body>
+        <title>네이버요약뉴스 사회</title>
+        <!-- 외부CSS 불러오기 : 익스터널방식 -->
+        <!-- 공통CSS -->
+        <link rel="stylesheet" href="./css/common.css" />
+        <!-- 서브CSS -->
+        <link rel="stylesheet" href="./css/sub.css" />
+        <style>
+            /* 스타일시트 영역에 CSS를 쓰는 방법 : 인터널방식 */
+            /* 
+        스타일시트 사용법:
+        선택자{
+          속성:값;
+          속성:값;
+        }
+      */
+        </style>
+    </head>
+    <body>
+        <!-- 1.상단영역 -->
+        <header class="header border-style1 layout-common" style="text-align: center">
+            <!-- 태그안에 style속성으로 지정하는 방법은 인라인방식임 -->
+            <h1 id="main-title">네이버요약뉴스</h1>
+            <ul>
+                <li>
+                    <a href="./index.html"><img id="main-logo" src="./images/naver_logo.png" alt="네이버 로고" /></a>
+                </li>
+                <li><a href="./sub1.html">경제</a></li>
+                <li><a href="./sub2.html">사회</a></li>
+                <li><a href="./sub3.html">IT/과학</a></li>
+                <li><a href="./sub4.html">TV/연예</a></li>
+            </ul>
+        </header>
+        <!-- 2.메인영역 -->
+        <main class="main layout-common">
+            <!-- 2-1. 서브타이틀 -->
+            <h2 class="sub-title society">사회</h2>
+            <!-- 2-2. 언론사로고 -->
+            <div class="press-logo">
+                <img src="./images/press_logo2.png" alt="서울신문" />
+            </div>
+            <!-- 2-3. 기사제목 -->
+            <h3 class="article-title">“이 편의점 얼음컵 먹지 마세요”…이마트24 얼음컵에 ‘세균 득실</h3>
+            <!-- 2-4. 기사사진 -->
+            <!-- figure는 이미지,표 박스 -->
+            <figure class="article-picture">
+                <img src="./images/article_img2.jpg" alt="기사사진" />
+                <!-- 이미지설명은 figcaption -->
+                <figcaption>
+                    <small>편의점 이마트24에서 판매 중인 얼음컵 제품에서 기준치를 초과한 세균이 검출됐다. 식약처 제공</small>
+                </figcaption>
+            </figure>
+            <!-- 2-5. 기사내용 -->
+            <p class="article-content">
+                식품의약품안전처(식약처)가 ‘이마트24’에서 판매한 일부 얼음컵에 대해 세균수 기준규격 부적합을 이유로 판매중단과 회수 명령을 내렸다. <br /><br />
+                <mark>식약처는 지난 16일 충청남도 아산시에 있는 식품제조가공업체 ‘블루파인’이 제조한 ‘이프레소 얼음컵’ 제품이 ‘세균수 기준규격 부적합’을 받았다고 밝혔다.</mark>
+                <br /><br />
+                ‘이프레소’는 이마트24가 2017년부터 선보인 자체 브랜드(PB) 중 하나다.
+                <br /><br />
+                해당 제품의 제조일자는 2025년 5월 28일이며, 포장단위는 180g이다.
+                <br /><br />
+                식약처는 “현재 충남 아산시청에서 해당 제품에 대해 판매 중단 및 회수 조치를 진행 중”이라며 “해당 제품을 보관 중인 판매자는 즉시 판매를 중단하고, 회수 영업자에게 반품해 달라”고 했다.
+            </p>
+            <!-- 2-6. 기자정보 -->
+            <div class="reporter-info">문경근 기자</div>
+            <!-- 2-7. 기사원문 -->
+            <div class="article-original">
+                <a href="https://n.news.naver.com/mnews/article/081/0003549790" target="_blank">기사원문</a>
+            </div>
+        </main>
+        <!-- 3.하단영역 -->
+        <footer class="footer border-style1 layout-common">
+            <!-- address요소 : 주소 등 정보 -->
+            <address>
+                서울시 강남구 역삼동 119 대호B 8F <br />
+                <!-- br요소 : 줄바꿈 -->
+                대표: Tom Brace Parker <br />
+                전화: 010-2222-3333
+            </address>
+        </footer>
+        <!-- 
+    
+      [ 1. HTML 서식 요소 ]
+      1. 두꺼운 글자
+      <b>- 굵은 글씨
+        (Bold Text - 단순히 글자만 두꺼움)
+      <strong>- 중요한 텍스트
+        (Important text - 중요함의 의미)
+
+      2. 이탤릭 글자
+      <i>- 이탤릭체 텍스트(기울임꼴 글자)
+          (Italic text - 글자만 이탤릭처리)
+      <em>- 강조된 텍스트
+          (Emphasized text - 강조의 의미)
+
+      3. 색상표시
+      <mark>- 표시된 텍스트
+          (Marked text - 눈에 띄게 표시)
+
+      4. 작은글자(13px)
+      <small>- 작은 텍스트
+          (Smaller text - 더 작은 텍스트)
+
+      5. 삭제된 글자표시
+      <del>- 삭제된 텍스트(Deleted text)          
+
+          중간 지우는줄표시 CSS속성값
+          text-decoration: line-through;
+
+      6. 삽입된 글자표시
+      <ins>- 삽입된 텍스트(Inserted text)
+        
+          밑줄표시 CSS속성값
+          text-decoration: underline;
+
+      7. 첨자표시
+      <sub>- 아래 첨자 텍스트
+        - 약간 아랫쪽 작은글자(Subscript text)
+        - 사용예 : 병행글자표시(영문,한자), 화학식
+
+      <sup>- 상위 첨자 텍스트
+        - 약간 윗쪽 작은글자(Superscript text)
+        - 사용예 : 주석표시숫자(숫자와 설명연결), 승수표시
+
+    ______________________________
+
+    [ 2. HTML 인용관련 요소 ]
+
+      1. 블록인용요소
+      <blockquote>
+          - 블록요소로 별도의 인용구를 구분하는 박스
+          - 주의: 내부에 p요소와 같은 다른 블록요소 사용불가!
+          - cite 속성 : 출처표시
+          (필수속성은 아니지만 url 주소가 들어가기 때문에
+          링크로 오해할 수 있으나 아님! 단순출처정보임)
+
+      2. 인라인 인용요소
+      <q>
+          - 작은 이용구(쌍따옴표가 자동생성됨!)
+          - 주의: 인라인요소임(blockquote와 구분할것!)
+
+      3. 줄임말 인용
+      <abbr>
+          - 줄임말의 원래 뜻을 표시하는 요소
+          - 필수속성 ->> title 속성 -> 툴팁으로 원래뜻을 표시
+      (참고: title 툴팁속성은 어느요소든 사용가능함!)
+          - 기본디자인 : 점선 밑줄
+          text-decoration: underline dotted;
+
+      4. 주소인용
+      <address>
+          - 주소, 대표자, 전화번호 등 사이트 정보표시
+      
+      5. 작품명 인용
+      <cite>
+          - 인용하고 있는 작품을 표시하기 위한 요소
+
+      6. 반대방향글 인용
+      <bdo>
+          - 글방향이 반대일때 사용함
+          - Bi-Directional Override(줄임)
+          - dir 속성 :  rtl(right to left : 오른쪽에서 왼쪽으로 진행)
+          - 아랍어, 이스라엘어 등 반대방향으로 
+          출력해야하는 문자를 인용할때 사용함!
+
+    --></body>
 </html>

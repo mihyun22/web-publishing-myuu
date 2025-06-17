@@ -2,9 +2,115 @@
 /* Info PJ 서브페이지용 CSS - sub.css */
 
 /* 2-1. 서브타이틀 */
+.sub-title{
+    /* 글자설정 */
+    font-family: "Jua", sans-serif;
+    font-style: 30px;
+    text-align: center;
+    /* 배경설정 -> 한번에 주는 방법: background: 색 이 반 고  윙/크
+    배경색 이미지 반복여부 고정 위치/크기 */
+    /* cover는 빈틈없이 다 덮는것 */
+    /* background: url(../images/titbg4.jpg) no-repeat center/cover ;  */
+
+    /* 배경공통속성 셋팅 */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    /* 박스설정 */
+    padding: 50px;
+}
+/* 서브별 타이틀 글자색, 배경이미지 셋팅 */
+/* (1)경제 */
+.economy{
+    color: lightcoral;
+    background-image: url(../images/titbg2.jpg);
+}
+/* (2)사회 */
+.society{
+    color: lightgreen;
+    background-image: url(../images/titbg3.jpg);
+}
+/* (3)IT/과학 */
+.science{
+    color: lightblue;
+    background-image: url(../images/titbg4.jpg);
+}
+/* (4)TV/연예 */
+.tv{
+    color: lightpink;
+    background-image: url(../images/titbg5.jpg);
+}
+
+
 /* 2-2. 언론사로고 */
+.press-logo img{
+    height: 32px;
+}
 /* 2-3. 기사제목 */
-/* 2-4. 기사사진 */
+.article-title{
+    font-size: 33px;
+}
+/* 2-4. 기사사진 */ 
+.article-picture{
+    /* figure요소의 기본 마진 없앰 */
+    margin: 0;
+    text-align: center;
+    /* 하단 마진 */
+    margin-bottom: 50px;
+}
+.article-picture img{
+    width: 100%;
+}
 /* 2-5. 기사내용 */
+.article-content{
+    font-size: 18px;
+    /* 줄간격 - 단위없으면 배수로 적용 */
+    line-height: 1.7;
+}
 /* 2-6. 기자정보 */
+.reporter-info{
+    /* 글자설정 */
+    font-size: 16px;
+    color: #8d8d8d;
+    text-decoration: underline;
+    /* 밑줄에만 줄간격 옵션있음 */
+    text-underline-offset: 5px;
+    /* 박스설정 */
+    margin-bottom: 20px;
+}
 /* 2-7. 기사원문 */
+.article-original{
+    text-align: right;
+}
+/* a요소에 원형디자인 적용 */
+.article-original a{
+    /* a는 디자인시 적용하고, 크기가 적용되지 않는다. textalign도 적용이 안된다. 그래서 크기 적용위해 block */
+    /* inline은 크기 디자인 적용이 안된다. a가 인라인요소임 */
+    /* 디자인 적용위해 inline-block -> 디자인은 block처럼, 정렬은 inline처럼 적용되는 display! */
+    display: inline-block;
+    /* 박스설정 */
+    width: 120px;
+    height: 120px;
+    border: 1px solid #000;
+    /* 둥근모서리 - 50%값은 원 (박스의 절반만큼 둥글게 하면 원) */
+    border-radius: 50%;
+    /* 글자설정 */
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    /* 가로중앙 */
+    text-align: center;
+    /* 세로중앙은 줄간격을 높이값만큼 준다! */
+    line-height: 120px;
+    /* 배경색 */
+    background-color: rgb(0, 0, 0);
+
+}
+
+/* 기사원문 오버시
+가상클래스 :hover */
+.article-original a:hover{
+    background-color: rgb(0, 68, 255);
+    color: #fff;
+}
