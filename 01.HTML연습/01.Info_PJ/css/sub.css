@@ -7,6 +7,23 @@
     font-family: "Jua", sans-serif;
     font-style: 30px;
     text-align: center;
+    /* 글자테두리 설정
+    테두리 두께를 소수점으로 쓰면 더 얇게 나온다!
+    .1px은 0.1px이며 자주 0은 생략된다! 
+    -webkit-text-stroke: -두께 -색상 */
+    -webkit-text-stroke: .1px #000;
+
+    /* 글자그림자로 테두리를 줄 수도 있다!
+    text-shadow: x축 y축 blur(생략할 수 있다) 색 -> tsh라고 치면 자동완성
+    -> blur는 그림자 경계선 흐림(안쓰면 흐림없음)
+    -> 어려개 사용시 콤마로 구분하여 쓴다!
+    */
+    /* text-shadow: 
+    0 1px #000,
+    0 -1px #000,
+    1px 0 #000,
+    -1px 0 #000; */
+
     /* 배경설정 -> 한번에 주는 방법: background: 색 이 반 고  윙/크
     배경색 이미지 반복여부 고정 위치/크기 */
     /* cover는 빈틈없이 다 덮는것 */
@@ -67,6 +84,23 @@
     font-size: 18px;
     /* 줄간격 - 단위없으면 배수로 적용 */
     line-height: 1.7;
+}
+/* mark태그 디자인 변경 */
+.article-content mark{
+    /* 블록으로 변경 */
+    display: block;
+    /* 박스설정 */
+    padding: 10px 50px;
+    background-color: #e4e4e4;
+    margin: 17px 30px;
+    /* bdt라 쓰면 자동완성 */
+    border-top: 2px solid gray;  
+    border-bottom: 2px solid gray;  
+    /* 글자설정 */
+    font-family: "Noto Sans KR", cursive;
+    font-size: 30px;
+    color: darkorange;
+    text-shadow: 2px 2px 1px #00000077;
 }
 /* 2-6. 기자정보 */
 .reporter-info{
