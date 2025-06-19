@@ -158,3 +158,40 @@ body{
 .leg2{
     right: 0;
 }
+
+/* 다리하단 공통 */
+.leg span{
+    position: absolute;
+    /* 부모는? .leg */
+    top: 100%;
+    left: 10%;
+
+    width: 80%;
+    height: 100%;
+}
+
+/* 로봇 TV */
+.tv{
+    position: absolute;
+    /* 부모는? .body */
+    top: 45px;
+    left: 20px;
+
+    width: 140px;
+    height: 100px;
+    /* 배경 */
+    background: url(../images/tv.jpg) no-repeat 0/100% 100%;
+}
+
+/* 스크린 */
+.screen{
+    position: absolute;
+    /* 부모는? .tv */
+    top: 55px;
+    left: 27px;
+
+    width: 100px;
+    height: 72px;
+    background-color: red;
+    border-radius: 10px;
+}
