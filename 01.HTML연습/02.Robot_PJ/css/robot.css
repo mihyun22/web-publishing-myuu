@@ -14,6 +14,12 @@ body{
     /* cursor: url(이미지경로), 대체모양설정 */
 }
 
+/* 로봇 전체박스 */
+.robot-box {
+    /* 로봇 다리를 위한 하단 패딩 */
+    padding-bottom: 700px;
+}
+
 /* 로봇머리 */
 .head{
     /* 부모자격필요! - ralative. 아래의 눈 위치를 잡아주기위해서 */
@@ -24,26 +30,131 @@ body{
     /* 아래의 배치 순서 : 위 양쪽 아래 */
     margin: 100px auto 50px;
 }
+/* 눈공통 */
+.eye{
+    /* 원형눈 */
+    border-radius: 50%;
+}
 /* 왼눈 */
 .eye1{
     position: absolute;
-    /* absolute의 부모는? 위의 .head (relative) - 이렇게 해야 부모영역 안에서 움직인다 */
+    /* absolute의 부모는? 위의 .head (relative) - 이렇게 해야 부모를 기준으로 움직인다 */
     top: 50px;
     left: 50px;
     
     width: 50px;
     height: 50px;
     background: url(../images/e1.jpg) no-repeat 0/100% 100%;
-
 }
+
 /* 오른눈 */
 .eye2{
     position: absolute;
-    /* absolute의 부모는? 위의 .head (relative) - 이렇게 해야 부모영역 안에서 움직인다 */
+    /* absolute의 부모는? 위의 .head (relative) - 이렇게 해야 부모를 기준으로 움직인다 */
     top: 50px;
     right: 50px;
 
     width: 50px;
     height: 50px;
     background: url(../images/e2.jpg) no-repeat 0/100% 100%;
+}
+
+/* 코 */
+.nose{
+    position: absolute;
+    top: 96px;
+    left: 100px;
+
+    width: 50px;
+    height: 70px;
+    background: url(../images/nose.jpg) no-repeat 0/110% 100%;
+
+    /* 모서리 둥글게 */
+    border-radius: 20px;
+}
+
+/* 입 */
+.mouth{
+    position: absolute;
+    bottom: 25px;
+    left: 80px;
+
+    width: 90px;
+    height: 40px;
+    background: url(../images/mouth.png) no-repeat 0/100% 100%;
+}
+
+/* 왼쪽귀 */
+.ear1{
+    position: absolute;
+    top: 87px;
+    left: -50px;
+
+    width: 50px;
+    height: 80px;
+
+}
+/* 오른쪽귀 */
+.ear2{
+    position: absolute;
+    top: 87px;
+    right: -50px;
+
+    width: 50px;
+    height: 80px;
+
+}
+
+/* 로봇몸 */
+.body{
+    /* 부모자격이 필요! */
+    position: relative;
+    width: 180px;
+    height: 320px;
+    /* 마영오 */
+    margin: 0 auto;
+}
+
+/* 팔공통 */
+.arm{
+    position: absolute;
+    /* 부모는? .body */
+    width: 50px;
+    height: 180px;
+}
+
+/* 팔하단공통 */
+.arm span{
+    position: absolute;
+    /* 부모는? .arm */
+    /* top의 100%는 부모와의 위치 */
+    top: 100%;
+    left: 10%;
+
+    width: 80%;
+    height: 80%;
+}
+
+/* 왼팔 */
+.arm1{
+    left: -50px;
+}
+
+/* 오른팔 */
+.arm2{
+    right: -50px;
+}
+
+/* 다리공통 */
+.leg{
+    position: absolute;
+    /* 부모는? .body */
+    top: 100%;
+
+    width: 70px;
+    height: 260px; 
+}
+/* 오른다리 */
+.leg2{
+    right: 0;
 }
