@@ -115,6 +115,17 @@ body{
     margin: 0 auto;
 }
 
+/* 목 */
+.neck{
+    position: absolute;
+    /* 부모는? .body */
+    top: -50px;
+    left: 65px;
+
+    width: 50px;
+    height: 50px;
+}
+
 /* 팔공통 */
 .arm{
     position: absolute;
