@@ -5,3 +5,45 @@
 @import url(./core.css);
 @import url(./reset.css);
 
+/* 전체 배경넣기 */
+body{
+    /* background: 색 이 반 고 윙/크 */
+    background: url(../images/bg.jpg) no-repeat fixed center top/cover;
+    /* 커서 이미지로 변경하기 */
+    cursor: url(../images/favicon.png), auto;
+    /* cursor: url(이미지경로), 대체모양설정 */
+}
+
+/* 로봇머리 */
+.head{
+    /* 부모자격필요! - ralative. 아래의 눈 위치를 잡아주기위해서 */
+    position: relative;
+    width: 250px;
+    height: 250px;
+    /* 가로중앙 - 마영오! */ 
+    /* 아래의 배치 순서 : 위 양쪽 아래 */
+    margin: 100px auto 50px;
+}
+/* 왼눈 */
+.eye1{
+    position: absolute;
+    /* absolute의 부모는? 위의 .head (relative) - 이렇게 해야 부모영역 안에서 움직인다 */
+    top: 50px;
+    left: 50px;
+    
+    width: 50px;
+    height: 50px;
+    background: url(../images/e1.jpg) no-repeat 0/100% 100%;
+
+}
+/* 오른눈 */
+.eye2{
+    position: absolute;
+    /* absolute의 부모는? 위의 .head (relative) - 이렇게 해야 부모영역 안에서 움직인다 */
+    top: 50px;
+    right: 50px;
+
+    width: 50px;
+    height: 50px;
+    background: url(../images/e2.jpg) no-repeat 0/100% 100%;
+}
