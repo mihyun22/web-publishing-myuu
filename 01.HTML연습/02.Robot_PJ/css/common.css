@@ -6,11 +6,15 @@
 .top-area{
     /* 플랙스 적용 - 직계자식요소가 적용됨! */
     display: flex;
-    /* 플랙스 진행방향 정렬 */
+    /* 플랙스 진행방향 정렬 : 양쪽끝 정렬 */
     justify-content: space-between;
+    /* 플렉스 진행방향의 수직정렬 : align-items : 중앙 */
+    align-items: center;
     /* 최대가로크기 1200px에 중앙정렬 */
     max-width: 1200px;
     margin: 0 auto;
+    /* 반투명 배경색 넣기 */
+    background-color: #00f7ff65;
 }
 
 /* 로고박스 */
@@ -28,5 +32,14 @@
     display: flex;
     /* 메뉴간 간격 - gap */
     gap: 30px;
+}
+/* 메뉴링크 */
+.nav-menu a {
+    font-size: 18px;
+    font-weight: bold;
+}
+/* 링크오버시 */
+.nav hover {
+    color: aqua;
 }
 /*********** 2. 하단영역  ***********/
