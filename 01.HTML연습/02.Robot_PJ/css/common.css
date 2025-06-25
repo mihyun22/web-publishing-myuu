@@ -14,7 +14,7 @@
     /* 맨위로 오도록 설정 */
     z-index: 999;
     /* 반투명 배경색 넣기 */
-    background-color: #00ccb165;
+    background-color: #00877e6a;
 }
 
 /* 속박스 */
@@ -74,7 +74,7 @@
 /* 겉박스 */
 #bottom-area{
     /* 반투명 배경색 넣기 */
-    background-color: #00ccb165;
+    background-color: #00877e6a;
 }
 /* 속박스 */
 .bottom-area{
@@ -104,9 +104,7 @@
 
 /* 하단 모든 링크 */
 .bottom-area a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s;
+  color: #ffffff;
 }
 
 /* 하단링크 오버시 */
