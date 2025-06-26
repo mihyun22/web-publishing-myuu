@@ -39,6 +39,12 @@
 /* 로고이미지 */
 .logo img{
     height: 100px;
+    /* 트랜지션 - transition:속시이지
+    값순서 : 속성 시간 이징 지연시간
+    속성값을 안쓰거나 all을 쓰면
+    모든 속성이 동일하게 적용된다.
+    시간의 단위는 초단위이고 s를 사용 */
+    transition: 1.5s ease-in-out;
 }
 /* 로고글자 - 앱솔루트로! */
 .logo span{
@@ -46,6 +52,9 @@
     /* 부모는? .logo */
     bottom: 20px;
     left: 30px;
+    /* 트랜스폼되는 로봇이미지가 위로 올라오게되는 특성때문에
+    z-index로 글자를 위로 올라오게 한다! */
+    z-index: 1;
 
     font-style: 24px;
     text-align: center;
@@ -53,6 +62,18 @@
     /* 글자그림자 : tsh */
     text-shadow: 2px 2px 4px aquamarine;
 } 
+
+/* 로고 글자 span박스에 오버시 다음 형제인 img
+위치 이동하기(트랜스폼의 트랜스레이트 x축사용!) */
+.logo span:hover + img {
+  /* transform: translateX(168%); */
+  /* x축으로 자기 가로크기의 168% 오른쪽으로 이동 */
+  /* transform: translate(168%, 0); */
+  translate: 168%;
+  /* translate속상 사용시 x축만 움직이려면
+  값을 하나만쓰고 y축 이동은 띄어쓰기로 뒤에 써준다!
+  y축만 이동하고 싶으면 앞에 0쓰고 뒤에 값을 쓴다. */
+}
 
 /* 메뉴박스 */
 .nav-menu ul{
