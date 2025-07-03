@@ -5,21 +5,47 @@
 
 /****** 1024px 이하 미디어쿼리 시작 ******/
 @media screen and (max-width: 1024px) {
+  /* display: block; 모바일 햄버거 버튼 보이게하기 */
+  .gnb-mob{
+    display: block;
+  }
+
   /* GNB메뉴 변경하기 */
   .gnb {
     position: fixed;
     top: 80px;
-    /* 오른쪽 바깥에 나가있음! */
+    /* left:100% 오른쪽 바깥으로 나가게함! */
     left: 100%;
     width: 100%;
     height: calc(100vh - 80px);
     background-color: white;
+
+    /* 트랜지션으로 애니메이션 설정 
+    transition: 속성 시간 이징 지연시간 (속성안쓰면 전부 다 적용됨) */
+    transition: left .6s ease-out;
+  }
+  /* .gnb에 클래스 on을 주면 left값 0
+  매뉴가 오른쪽에서 왼쪽으로 들어옴! */
+  .gnb.on{
+    left: 0;
   }
   /* GNB 플랙스 ul요소 변경 */
   .gnb > ul {
     flex-direction: column;
     gap: 3vh;
     font-size: 5vw;
+  }
+
+  /* 배너 DT용 트랜스폼으로 윗쪽이동하기 */
+  .banner img {
+    /* 트랜스폼 Y축위치이동 */
+    translate: 0 -150%;
+    /* 가로크기 사이즈 적응 */
+    max-width: 100%;
+    /* 세로크기는 자동으로 전환 */
+    height: auto;
+    /* 투명도 0 */
+    opacity: 0;
   }
 } /****** 1024px 이하 미디어쿼리 종료 ******/
 
