@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+@import url(./reset2.css);
+@import url(./core2.css);
+
+:root {
+    /* 색상변수 : --이름-color */
+    --main-gray-color: #222;
+    --character-area-color: #fefefe;
+    --company-area-color: #f4f4f4;
+    --contact-area-color: #4a679d;
+    /* 사이즈변수 : --이름-size */
+    --top-area-padding-size: 2rem 5rem;
+    --bottom-area-padding-size: 5rem;
+    --contents-box-padding-size: 8.5rem 0 0;
+    --cat-title-padding-size: 1.5rem 1rem;
+}
+
+html {
+    font-size: 10px;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 10rem;
+}
+
+#top-area{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.top-area{
+    padding: var(--top-area-padding-size)
+}
+
+.top-area > ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1.logo img{
+    height: min(4rem, 4vw);
+}
+
+.gnb{
+    height: 100%;
+}
+
+.gnb > ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+
+.banner{
+    background: url(../images2/main_visual_bg.jpg) 0/50px;
+    text-align: center;
+    padding: 10rem;
+}
+
+.banner img{
+    height: 60vmin;
+}
