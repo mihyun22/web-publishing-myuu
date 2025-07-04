@@ -1,7 +1,45 @@
 @charset "utf-8";
 
 @media screen and (max-width: 1024px) {
-    .gnb, .banner img{
-        display: none;
+    .gnb-mob{
+        display: block;
     }
+}
+
+.gnb{
+    position: fixed;
+    top: 80px;
+    left: 100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: white;
+
+    transition: left .6s ease-out;
+}
+
+.gnb.on{
+    left: 0;
+}
+
+.gnb > ul{
+    flex-direction: column;
+    gap: 3vh;
+    font-size: 5vw;
+}
+
+.banner img:first-child{
+    translate: 0 -150%;
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+}
+
+.banner img:last-child{
+    transition: -50% -50%;
+    max-width: 80%;
+    height: auto;
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px){
 }

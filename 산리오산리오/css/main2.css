@@ -31,12 +31,13 @@ body {
 #top-area{
     position: fixed;
     top: 0;
+    z-index: 9999;
     width: 100%;
     background-color: #fff;
 }
 
 .top-area{
-    padding: var(--top-area-padding-size)
+    padding: var(--top-area-padding-size);
 }
 
 .top-area > ul{
@@ -61,8 +62,47 @@ h1.logo img{
     font-weight: 500;
 }
 
+.gnb-mob{
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+    width: 34px;
+    height: 34px;
+    display: none;
+}
+
+
+.gnb-mob span{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    transition: .3s ease-out;
+}
+
+.gnb-mob span+span{
+    margin-top: 11px;
+}
+
+.gnb-mob.on span:nth-child(1){
+    translate: 0 15px;
+    rotate: 45deg;
+}
+.gnb-mob.on span:nth-child(2){
+    translate: 17px 0;
+    width: 0;
+}
+.gnb-mob.on span:nth-child(3){
+    translate: 0 -15px;
+    rotate: -45deg;
+}
+
+#main-area > div{
+    padding: var(--contents-box-padding-size);
+}
 
 .banner{
+    position: relative;
     background: url(../images2/main_visual_bg.jpg) 0/50px;
     text-align: center;
     padding: 10rem;
@@ -70,4 +110,13 @@ h1.logo img{
 
 .banner img{
     height: 60vmin;
+    transition: .7s ease-in-out;
+}
+
+.banner img:last-child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -250%;
+    opacity: 0;
 }
