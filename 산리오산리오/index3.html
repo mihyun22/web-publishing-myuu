@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>산리오 코리아</title>
+    <link rel="stylesheet" href="./css/main3.css" />
+    <link rel="stylesheet" href="./css/main_media3.css" />
+  </head>
+  <body>
+    <div id="top-area">
+      <header class="top-area">
+        <ul>
+          <li>
+            <h1 class="logo">
+              <a href="#"></a>
+              <img src="./images2/logo_2023.png" alt="로고" />
+            </h1>
+          </li>
+          <li>
+            <nav class="gnb">
+              <ul>
+                <li><a href="#">company</a></li>
+                <li><a href="#">character</a></li>
+                <li><a href="#">place</a></li>
+                <li><a href="#">recruit</a></li>
+              </ul>
+            </nav>
+            <nav class="gnb-mob"
+            onclick="this.classList.toggle('on');
+            document.querySelector('.gnb')
+            .classList.toggle('on');
+            ">
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </nav>
+          </li>
+        </ul>
+      </header>
+    </div>
+    <main id="main-area">
+      <div class="banner">
+        <section class="inbox dt-box">
+          <img
+            src="./images2/main_visual_pc_v1.png"
+            alt="데스크탑용 메인 배너"
+          />
+          <img
+            src="./images2/main_visual_m_v1.png"
+            alt="데스크탑용 메인 배너"
+          />
+        </section>
+      </div>
+      <div class="character"></div>
+      <section class="inbox">
+        <h2 class="stit">character</h2>
+        <div class="center-box">
+          <a href="#" class="com-btn view-btn">view more</a>
+        </div>
+        <div class="cat-list"></div>
+        <ul>
+          <li>
+            <figure>
+              <div class="img-part"></div>
+              <img src="./images2/new_main_crt1.png" alt="헬로키티" />
+              <img src="./images2/new_main_crt1_ov.png" alt="헬로키티" />
+            </figure>
+            <figcaption>
+              <h3>헬로키티</h3>
+            </figcaption>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
