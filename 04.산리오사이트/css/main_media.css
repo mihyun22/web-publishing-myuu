@@ -6,7 +6,7 @@
 /****** 1024px 이하 미디어쿼리 시작 ******/
 @media screen and (max-width: 1024px) {
   /* display: block; 모바일 햄버거 버튼 보이게하기 */
-  .gnb-mob{
+  .gnb-mob {
     display: block;
   }
 
@@ -22,11 +22,11 @@
 
     /* 트랜지션으로 애니메이션 설정 
     transition: 속성 시간 이징 지연시간 (속성안쓰면 전부 다 적용됨) */
-    transition: left .6s ease-out;
+    transition: left 0.6s ease-out;
   }
   /* .gnb에 클래스 on을 주면 left값 0
   매뉴가 오른쪽에서 왼쪽으로 들어옴! */
-  .gnb.on{
+  .gnb.on {
     left: 0;
   }
   /* GNB 플랙스 ul요소 변경 */
@@ -58,9 +58,31 @@
     /* 투명도 1 */
     opacity: 1;
   }
+
+  /* 캐릭터 리스트 영문 타이틀 안보이게 하기 */
+  .cat-list figcaption p {
+    display: none;
+  }
 } /****** 1024px 이하 미디어쿼리 종료 ******/
 
 /****** 800px 이하 미디어쿼리 시작 ******/
 @media screen and (max-width: 800px) {
+  /* 캐릭터 리스트 한줄에 2개씩 보이게하기 */
+  .cat-list ul li {
+    width: calc(50% - 2rem);
+  }
+  /* 컴퍼니 리스트 한줄에 한개씩 보이기 */
+  .com-type-list {
+    /* 플랙스박스 진행방향 변경 */
+    flex-direction: column;
+    align-items: center;
+  }
+  .com-type-list li{
+    padding-bottom: 5rem;
+  }
+  /* 설명 p요소 없애기 */
+  .com-type-list p {
+    display: none;
+  }
 }
 /****** 800px 이하 미디어쿼리 종료 ******/
