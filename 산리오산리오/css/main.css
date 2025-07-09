@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+@import url(./reset.css);
+@import url(./core.css);
+
+:root {
+    /* 색상변수 : --이름-color */
+    --main-gray-color: #222;
+    --character-area-color: #fefefe;
+    --company-area-color: #f4f4f4;
+    --contact-area-color: #4a679d;
+    /* 사이즈변수 : --이름-size */
+    --top-area-padding-size: 2rem 5rem;
+    --bottom-area-padding-size: 5rem;
+    --contents-box-padding-size: 8.5rem 0 0;
+    --cat-title-padding-size: 1.5rem 1rem;
+}
+
+html {
+    font-size: 10px;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 10rem;
+}
+
+#top-area{
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: #fff;
+}
+
+.top-area{
+    padding: var(--top-area-padding-size);
+}
+
+.top-area > ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1.logo img{
+    height: min(4rem, 4vw);
+}
+
+.gnb{
+    height: 100%;
+}
+
+.gnb > ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.gnb-mob{
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+    width: 34px;
+    height: 34px;
+    display: none;
+}
+
+
+.gnb-mob span{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    transition: .3s ease-out;
+}
+
+.gnb-mob span+span{
+    margin-top: 11px;
+}
+
+.gnb-mob.on span:nth-child(1){
+    translate: 0 15px;
+    rotate: 45deg;
+}
+.gnb-mob.on span:nth-child(2){
+    translate: 17px 0;
+    width: 0;
+}
+.gnb-mob.on span:nth-child(3){
+    translate: 0 -15px;
+    rotate: -45deg;
+}
+
+#main-area > div{
+    padding: var(--contents-box-padding-size);
+}
+
+.banner{
+    position: relative;
+    background: url(../images2/main_visual_bgg.png) 0/50px;
+    text-align: center;
+    padding: 10rem;
+}
+
+
+
+.banner img {
+    height: 60vmin;
+    transition: 0.7s ease-in-out;
+}
+
+
+.banner img:last-child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -250%;
+    opacity: 0;
+}
+
+.character{
+    background-color: var(--character-area-color);
+}
+
+.cat-list ul{
+    display: flex;
+    /* 기본값 nowrap (한 줄에 강제로 배치) , wrap을 설정하면 너무 많을 경우 다음 줄로 자동 줄바꿈 */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 10rem
+}
+
+.cat-list ul li{
+    width: calc(25% - 2rem);
+    padding: 1rem;
+    box-sizing: border-box;
+    /* 줄바꿈 없이 한줄로 표시 */
+    white-space: nowrap;
+}
+
+.img-part{
+    position: relative;
+}
+
+.cat-list img{
+    width: 100%;
+}
+
+.cat-list img:last-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.cat-list li:hover img:last-child{
+    opacity: 1;
+}
+
+.cat-list figure{
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.cat-list figcaption{
+    text-align: center;
+    padding: var(--cat-title-padding-size);
+}
+
+.cat-list figcaption h3{
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+.cat-list figcaption p{
+    font-size: 1.2rem;
+}
+
+.company{
+    background-color: var(--company-area-color);
+}
+
+.recruit{
+    background-color: var(--character-area-color) url(../images2/bg_recruit.png) no-repeat center 10vh/90%;
+}
+
+.com-type-list{
+    display: flex;
+    /* Flexbox 레이아웃에서 아이템을 가로 방향으로 고르게 나누어 정렬할 때 사용하는 속성 */
+    justify-content: space-evenly;
+    text-align: center;
+    padding-bottom: 10rem;
+}
+
+.com-type-list h3{
+    font-size: 2.2rem;
+    padding: 2rem 0;
+    font-weight: normal;
+}
+
+
+.com-type-list p{
+    font-size: 1.6rem;
+}
+
+/* 마지막 요소를 선택 */
+.com-type-list p:last-of-type{
+    padding-bottom: 3rem;
+}
