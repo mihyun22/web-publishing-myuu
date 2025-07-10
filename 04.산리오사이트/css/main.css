@@ -278,59 +278,143 @@ h1.logo img {
 }
 /* 2-5. 플레이스영역 */
 #main-area .place {
+  /* 아래쪽 패딩 밀어서 박스 높이 증가하기 */
+  padding-bottom: 30vh;
+  /* 박스를 꽉채우는 배경이미지 넣기 */
+  background: url(../images/bg_shop.jpg) no-repeat center/cover;
 }
 /* 2-6. 컨텍어스영역 */
 .contact-us {
+  /* 배경색 bgc */
+  background-color: var(--contact-area-color);
 }
 
 /* 3. 컨텍어스 영역 */
 /* 3-1.컨텍어스 내용박스 부모 */
 .map-info {
+  /* 플랙스 박스 */
+  display: flex;
+  /* 높이 350 */
+  height: 35rem;
+  /* 윗마진 50 */
+  margin-top: 5rem;
 }
 /* 컨텍어스 자식 파티션 박스 등분할 */
 .map-info > div {
+  /* 자식요소 플랙스 1:1 */
+  /* flex: 1; */
+  /* 자식요소에 패딩을 주면 크기가 늘어나므로 플랙스 자식요소에 가로크기(flex-basis)를 50%로 설정한다! */
+  flex-basis: 50%;
 }
 /* 3-2. 지도박스 */
 .map-box {
 }
 .map-box iframe {
+  /* 아이프레임의 기본보더 없앰 */
+  border: none;
+  /* 지도를 본 박스에 꽉차게함 */
+  width: 100%;
+  height: 100%;
+  /* 왼쪽위, 왼쪽아래만 둥근모서리 4rem */
+  border-radius: 4rem 0 0 4rem;
 }
 
 /* 3-3. 정보박스 */
 .info-box {
+  /* 부모자격 */
+  position: relative;
+  /* 배경흰색 */
+  background-color: #fff;
+  /* 오른쪽위, 오른쪽 아래만 둥근모서리 4rem */
+  border-radius: 0 4rem 4rem 0;
+  /* 패딩 50 */
+  padding: 5rem;
+  /* 보더박스 - 패딩을 줘도 안늘어남! */
+  box-sizing: border-box;
 }
 /* 키티 이미지 앱솔루트! */
 .info-box img {
+  /* 오른쪽 아래 위치 */
+  position: absolute;
+  bottom: -55px;
+  right: 30px;
 }
 /* 한글주소 : h3 */
 .info-box h3 {
+  /* 글자크기 2.5 */
+  font-size: 2.5rem;
+  /* 줄간격 1.5 */
+  line-height: 1.5;
 }
 /* 영문주소 : address */
 .info-box address {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-style: normal;
+    line-height: 2;
+    color: #aaa;
 }
 /* 전화번호 : p */
 .info-box p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.7;
+    color: var(--main-gray-color);
 }
 
 /* 4. 하단영역 */
 .bottom-area {
+  display: flex;
+  /* 진행방향 정렬 양쪽끝 */
+  justify-content: space-between;
+  /* 진행방향 수직 정렬 중앙 */
+  align-items: center;
+  background-color: #222;
+  padding: 5rem;
 }
 /* 4-1. 카피라잇박스 */
-.copy-right img {
+.copy-right img{
+  width: 197px;
 }
 /* 4-2. 버튼박스 */
-.btn-box .com-btn:hover {
+.btn-box .com-btn:hover{
+  background-color: #222;
+  color: #fff;
+  border-color: #fff;
 }
 
 /* 5. sns버튼 박스 */
 .q-btn {
+  position: fixed;
+  width: max(min(60px,5vw),40px);
+  top: 10vh;
+  right: 1vh;
+  z-index: 998;
 }
-.q-btn img {
+.q-btn img{
+  width: 100%;
 }
 /* 6. 탑이동버튼 */
-.top-btn {
+ .top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 999;
 }
 .top-btn span {
+  display: table-cell;
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #4a679e;
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
 }
 .top-btn span:before {
+  display: block;
+  content: url(../images/top_arr.png);
 }

@@ -1,10 +1,12 @@
 연습이야
 
 코딩 AI
-Claude
+Claude : 코딩을 잘 해줌. 하루 사용량이 적음
 Gemini
 뤼튼
+ChatGPT
+커서
 
-vscode에 설치하기
+vscode에 설치하기 (vscode-github-copilot연결이 좋음)
 windsurf, copilot
 단축키 : ctrl+i
