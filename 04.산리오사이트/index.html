@@ -544,8 +544,13 @@
     </aside>
 
     <!-- 탑이동버튼 -->
-     <div id="to-top" class="top-btn">
-      <span>top</span>
-    </div>
+    <div id="to-top" class="top-btn" onclick="scrollToTop()">
+     <span>top</span>
+      </div>
+      <script>
+     function scrollToTop() {
+       window.scrollTo({ top: 0, behavior: 'smooth' });
+     }
+      </script>
   </body>
 </html>
